@@ -1,14 +1,13 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 
-const App: React.FC = () => {
+import Hajimete from 'containers/Hajimete';
+
+const Layouts: React.FC = () => {
   return (
     <main className='layouts'>
-      <Button variant='contained' color='primary'>
-        Hello, RxJS!
-      </Button>
+      <Hajimete />
     </main>
   );
 };
 
-export default App;
+export default Layouts;
