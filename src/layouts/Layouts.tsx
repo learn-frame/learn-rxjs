@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Synchronize from 'containers/Synchronize';
+import CreationOperators from 'containers/CreationOperators';
 
 const Layouts: React.FC = () => {
   return (
     <main className='layouts'>
-      <Synchronize />
+      <CreationOperators />
     </main>
   );
 };

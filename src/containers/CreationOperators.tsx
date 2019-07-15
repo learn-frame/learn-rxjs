@@ -99,9 +99,9 @@ function tryOperator() {
   source$.subscribe(v => console.log(v));
 }
 
-const Synchronize: React.FC = () => {
+const CreationOperators: React.FC = () => {
   tryOperator();
-  return <section className='synchronize'>同步数据流</section>;
+  return <h1 className='creationOperators'>创建操作符</h1>;
 };
 
-export default Synchronize;
+export default CreationOperators;
