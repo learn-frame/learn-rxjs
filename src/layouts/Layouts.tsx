@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Hajimete from 'containers/Hajimete';
+import Synchronize from 'containers/Synchronize';
 
 const Layouts: React.FC = () => {
   return (
     <main className='layouts'>
-      <Hajimete />
+      <Synchronize />
     </main>
   );
 };
