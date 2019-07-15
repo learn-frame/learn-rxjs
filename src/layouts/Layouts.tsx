@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Hajimete from 'containers/Hajimete';
+import CreationOperators from 'containers/CreationOperators';
 
 const Layouts: React.FC = () => {
   return (
     <main className='layouts'>
-      <Hajimete />
+      <CreationOperators />
     </main>
   );
 };
