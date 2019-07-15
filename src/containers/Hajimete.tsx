@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { fromEvent, Observable } from 'rxjs';
+import { fromEvent, Observable, Subscriber } from 'rxjs';
 import { scan, throttleTime, map, take } from 'rxjs/operators';
 
 import Button from '@material-ui/core/Button';
@@ -14,15 +14,15 @@ class Hajimete extends React.Component<{}, {}> {
   }
 
   public componentDidMount() {
-    // this.firstRxJS();
-    this.initObservable();
+    this.firstRxJS();
+    this.onObservable();
   }
 
   public firstRxJS() {
     const button = document.querySelector('.button');
     fromEvent(button as any, 'click')
-      
       .pipe(
+        // 只能点击两次 (该函数只能被调用两次)
         take(2),
         // 任务管道化
         // 先通过节流，在进行 count 的自增
@@ -36,19 +36,27 @@ class Hajimete extends React.Component<{}, {}> {
       .subscribe(count => console.log(`我为长者+${count}s`));
   }
 
-  public initObservable() {
+  public onObservable() {
     let count = 0;
-    const observable = new Observable(subscriber => {
-      subscriber.next(++count);
-      subscriber.next(++count);
-      setTimeout(() => {
+    const observable = new Observable((subscriber: Subscriber<any>) => {
+      try {
         subscriber.next(++count);
-        subscriber.complete();
-      }, 1000);
+        subscriber.next(++count);
+        const timer = setInterval(() => {
+          subscriber.next(++count);
+          // clearInterval(timer);
+          // subscriber.complete();
+        }, 1000);
+        return function unsubscribe() {
+          clearInterval(timer);
+        };
+      } catch (e) {
+        subscriber.error('Something wrong...');
+      }
     });
 
     console.log('just before subscribe'); // 1
-    observable.subscribe({
+    const subscription = observable.subscribe({
       next(x) {
         // 2 同时打印出值 1 和 2
         // 4 1s后打印出 3
@@ -63,6 +71,7 @@ class Hajimete extends React.Component<{}, {}> {
       },
     });
     console.log('just after subscribe'); // 3
+    subscription.unsubscribe();
   }
 
   public render() {
