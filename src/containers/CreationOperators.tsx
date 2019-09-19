@@ -1,23 +1,23 @@
-import React from 'react';
+import React from 'react'
 import {
-  of,
   Observable,
-  range,
-  generate,
   interval,
-  throwError,
-  timer,
-  from,
-} from 'rxjs';
+  // of,
+  // range,
+  // generate,
+  // throwError,
+  // timer,
+  // from,
+} from 'rxjs'
 import {
   map,
-  repeat,
   take,
-  defaultIfEmpty,
-  catchError,
   filter,
-} from 'rxjs/operators';
-import { ajax } from 'rxjs/ajax';
+  // repeat,
+  // defaultIfEmpty,
+  // catchError,
+} from 'rxjs/operators'
+// import { ajax } from 'rxjs/ajax'
 
 function tryOperator() {
   // of 是将数据包装成 Observable 对象
@@ -95,13 +95,13 @@ function tryOperator() {
     filter(v => v % 2 === 0),
     // 然后给这些偶数平方
     map(v => v * v),
-  );
-  source$.subscribe(v => console.log(v));
+  )
+  source$.subscribe(v => console.log(v))
 }
 
 const CreationOperators: React.FC = () => {
-  tryOperator();
-  return <h1 className='creationOperators'>创建操作符</h1>;
-};
+  tryOperator()
+  return <h1 className='creationOperators'>创建操作符</h1>
+}
 
-export default CreationOperators;
+export default CreationOperators
