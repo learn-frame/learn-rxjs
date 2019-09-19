@@ -1,7 +1,15 @@
+.layouts {
+  margin: 24px;
+}
+
+.mainContent {
+  margin-top: 24px;
+}
+
 a {
   color: #ffffff;
 }
 
-.layouts {
-  margin: 24px;
+a:hover {
+  color: #ffffff;
 }
