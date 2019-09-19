@@ -1,10 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'normalize.css';
-import './index.css';
-import Layouts from './layouts/Layouts';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import { BrowserRouter, Router } from 'react-router-dom'
+import ReactDOM from 'react-dom'
+import history from 'shared/history'
 
-ReactDOM.render(<Layouts />, document.getElementById('root'));
+import Layouts from './layouts/Layouts'
+import * as serviceWorker from './serviceWorker'
+import 'semantic-ui-css/semantic.min.css'
+import 'assets/styles/global.css'
 
-serviceWorker.unregister();
+ReactDOM.render(
+  <BrowserRouter>
+    <Router history={history}>
+      <Layouts />
+    </Router>
+  </BrowserRouter>,
+  document.getElementById('root'),
+)
+
+serviceWorker.unregister()
