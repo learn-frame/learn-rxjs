@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Wrapper from 'components/Common/Wrapper'
-import { Button, Divider } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 
 // concat 属于静态方法
 import { concat, timer } from 'rxjs'

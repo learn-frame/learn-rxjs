@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
-import { merge, interval, timer, of } from 'rxjs'
 import Wrapper from 'components/Common/Wrapper'
-import { Button, Divider } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
+import { merge, interval, timer, of } from 'rxjs'
 
 const tryMerge1 = () => {
   const source1$ = of(1, 2, 3)
@@ -40,7 +40,7 @@ const tryMerge3 = () => {
 const Merge: FC = () => {
   return (
     <Wrapper title='merge'>
-        <p>
+      <p>
         merge 有静态方法和实例方法，<em>而静态方法已被丢弃</em>
       </p>
       <Button secondary onClick={tryMerge1}>
