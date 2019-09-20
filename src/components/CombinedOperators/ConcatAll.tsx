@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import Wrapper from 'components/Common/Wrapper'
 import { Button } from 'semantic-ui-react'
 
 // concat 属于实例方法
@@ -22,9 +23,11 @@ const tryConcatAll = () => {
 
 const ConcatAll: FC = () => {
   return (
-    <Button secondary onClick={tryConcatAll}>
-      tryConcatAll
-    </Button>
+    <Wrapper title='concatAll'>
+      <Button secondary onClick={tryConcatAll}>
+        tryConcatAll
+      </Button>
+    </Wrapper>
   )
 }
 

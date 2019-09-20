@@ -101,7 +101,7 @@ function tryOperator() {
 
 const CreationOperators: React.FC = () => {
   tryOperator()
-  return <h1 className='creationOperators'>创建操作符</h1>
+  return <h1>创建操作符</h1>
 }
 
 export default CreationOperators

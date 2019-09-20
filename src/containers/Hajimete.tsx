@@ -1,7 +1,6 @@
 import React, { FC, useEffect } from 'react'
 import { fromEvent, Observable, Subscriber } from 'rxjs'
 import { scan, throttleTime, map, take } from 'rxjs/operators'
-import { Button } from 'semantic-ui-react'
 
 // RxJS is a library for composing asynchronous and event-based programs by using observable sequences.
 // RxJS是 一个 通过使用可观察序列 来组合 异步和基于事件的程序 的库.
@@ -66,7 +65,7 @@ const Hajimete: FC = () => {
     firstRxJS()
     onObservable()
   }, [])
-  return <Button secondary>Hello, RxJS!</Button>
+  return <h1>初めて、RXJS。</h1>
 }
 
 export default Hajimete

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
-import { Button } from 'semantic-ui-react'
+import { Button, Divider } from 'semantic-ui-react'
 
 import Hajimete from 'containers/Hajimete'
 import CreationOperators from 'containers/CreationOperators'
@@ -20,7 +20,9 @@ const Layouts: FC = () => {
           <Link to='/CombinedOperators'>CombinedOperators</Link>
         </Button>
       </nav>
+
       <main className='mainContent'>
+        <Divider />
         <Switch>
           <Route path='/Hajimete' render={() => <Hajimete />} />
           <Route
