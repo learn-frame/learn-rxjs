@@ -10,15 +10,17 @@ const Layouts: FC = () => {
   return (
     <section className='layouts'>
       <nav>
-        <Button primary>
-          <Link to='/Hajimete'>Hajimete</Link>
-        </Button>
-        <Button primary>
-          <Link to='/CreationOperators'>CreationOperators</Link>
-        </Button>
-        <Button primary>
-          <Link to='/CombinedOperators'>CombinedOperators</Link>
-        </Button>
+        <Link to='/Hajimete'>
+          <Button primary>Hajimete </Button>
+        </Link>
+
+        <Link to='/CreationOperators'>
+          <Button primary>CreationOperators </Button>
+        </Link>
+
+        <Link to='/CombinedOperators'>
+          <Button primary>CombinedOperators </Button>
+        </Link>
       </nav>
 
       <main className='mainContent'>

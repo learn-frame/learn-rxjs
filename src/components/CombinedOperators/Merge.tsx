@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Wrapper from 'components/Common/Wrapper'
+import Wrapper from 'components/Commons/Wrapper'
 import { Button } from 'semantic-ui-react'
 import { merge, interval, timer, of } from 'rxjs'
 

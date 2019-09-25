@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Wrapper from 'components/Common/Wrapper'
+import Wrapper from 'components/Commons/Wrapper'
 import { Button, Divider } from 'semantic-ui-react'
 import { zip, interval, of } from 'rxjs'
 
@@ -80,11 +80,9 @@ const Zip: FC = () => {
       <Divider />
 
       <p>
-        对于下面这个例子，
-        <code>interval(500)</code> 和 <code>interval(2000)</code>
-        ，source1$ 要产生 4 个，才会和 1 个 source2$
-        配对，所以当上游快，下游慢时， 将会造成 <strong>数据积压</strong>，
-        后面的 <strong>backPressure</strong> 操作符会解决此类问题
+        对于上面「一个同步一个异步」的那个例子，如果上游快（数据多），下游慢时，
+        将会造成 <strong>数据积压</strong>， 后面的
+        <strong>backPressure</strong> 操作符会解决此类问题
       </p>
 
       <Divider />

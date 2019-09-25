@@ -7,9 +7,9 @@
 }
 
 a {
-  color: #ffffff;
+  color: inherit;
 }
 
 a:hover {
-  color: #ffffff;
+  color: inherit;
 }
