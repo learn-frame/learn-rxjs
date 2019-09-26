@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import Wrapper from 'components/Commons/Wrapper'
 import { Button } from 'semantic-ui-react'
 
-// concat 属于实例方法
 import { interval, of } from 'rxjs'
 import { map, concatAll, concatMap } from 'rxjs/operators'
 
