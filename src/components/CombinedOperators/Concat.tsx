@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import Wrapper from 'components/Commons/Wrapper'
 import { Button } from 'semantic-ui-react'
 
-// concat 属于静态方法
 import { concat, timer } from 'rxjs'
 import { map } from 'rxjs/operators'
 

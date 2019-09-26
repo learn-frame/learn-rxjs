@@ -26,30 +26,26 @@ const CombinedOperators: FC = () => {
       </Link>
 
       <Link to='/CombinedOperators/Merge'>
-        {' '}
         <Button basic color='yellow'>
-          Merge{' '}
+          Merge
         </Button>
       </Link>
 
       <Link to='/CombinedOperators/Zip'>
-        {' '}
         <Button basic color='olive'>
-          Zip{' '}
+          Zip
         </Button>
       </Link>
 
       <Link to='/CombinedOperators/CombineLatest'>
-        {' '}
         <Button basic color='green'>
-          CombineLatest{' '}
+          CombineLatest
         </Button>
       </Link>
 
       <Link to='/CombinedOperators/WithLatestFrom'>
-        {' '}
         <Button basic color='teal'>
-          WithLatestFrom{' '}
+          WithLatestFrom
         </Button>
       </Link>
 
