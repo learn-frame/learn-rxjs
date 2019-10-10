@@ -67,7 +67,7 @@ const Zip: FC = () => {
         对于异步流，也会进行一一匹配，
         <code>interval(1000)</code> 和 <code>of('a', 'b', 'c', 'd')</code>
         进行 zip，会每隔一秒吐出一个数组：
-        <code>[1, 'a'] [2, 'b'] [3, 'c'] [4, 'd']</code>
+        <code>[0, 'a'] [1, 'b'] [2, 'c'] [3, 'd']</code>
         ，因为 source2$ 只有四个数据，因此四秒后 zip 完成
       </p>
       <Button secondary onClick={async}>

@@ -17,7 +17,9 @@ const tryConcatAll = () => {
 
   // map 和 concatAll 的组合可以用 concatMap 代替
   // concatMap 属于「转换操作符」
-  interval(1000).pipe(concatMap(val => of(val + 10)))
+  interval(1000)
+    .pipe(concatMap(val => of(val + 10)))
+    .subscribe(v => console.log(v))
 }
 
 const ConcatAll: FC = () => {

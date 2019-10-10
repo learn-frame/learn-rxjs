@@ -7,6 +7,9 @@ import Merge from 'components/CombinedOperators/Merge'
 import Zip from 'components/CombinedOperators/Zip'
 import CombineLatest from 'components/CombinedOperators/CombineLatest'
 import WithLatestFrom from 'components/CombinedOperators/WithLatestFrom'
+import Race from 'components/CombinedOperators/Race'
+import StartWith from 'components/CombinedOperators/StartWith'
+import ForkJoin from 'components/CombinedOperators/ForkJoin'
 
 const CombinedOperators: FC = () => {
   return (
@@ -49,6 +52,26 @@ const CombinedOperators: FC = () => {
         </Button>
       </Link>
 
+      <Link to='/CombinedOperators/Race'>
+        <Button basic color='blue'>
+          Race
+        </Button>
+      </Link>
+
+      <Link to='/CombinedOperators/StartWith'>
+        <Button basic color='violet'>
+          StartWith
+        </Button>
+      </Link>
+
+      <Link to='/CombinedOperators/ForkJoin'>
+        <Button basic color='purple'>
+          ForkJoin
+        </Button>
+      </Link>
+
+      {/* pink brown grey black */}
+
       <Divider />
 
       <Switch>
@@ -67,6 +90,12 @@ const CombinedOperators: FC = () => {
           path='/CombinedOperators/WithLatestFrom'
           render={() => <WithLatestFrom />}
         />
+        <Route path='/CombinedOperators/Race' render={() => <Race />} />
+        <Route
+          path='/CombinedOperators/StartWith'
+          render={() => <StartWith />}
+        />
+        <Route path='/CombinedOperators/ForkJoin' render={() => <ForkJoin />} />
       </Switch>
     </section>
   )
